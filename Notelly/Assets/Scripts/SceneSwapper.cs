@@ -6,10 +6,9 @@ using UnityEngine.SceneManagement;
 public class SceneSwapper : MonoBehaviour
 {
     //vowels button triggers scene change to the first lesson
-    public void GoToSceneTwo()
+    public void MoveToScene(int sceneID)
     {
-        SceneManager.LoadScene("Lesson Vowels");
-
+        SceneManager.LoadScene(sceneID);
 
     }
 }
