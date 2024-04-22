@@ -1293,6 +1293,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341583947}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &442414107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,6 +2099,8 @@ CanvasRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 >>>>>>> EmilyEdits
+=======
+>>>>>>> parent of 07efad7 (Merge pull request #9 from esm33/Diedits)
 --- !u!1 &562305842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2488,6 +2491,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.7652173}
   m_AnchorMax: {x: 1, y: 0.9999999}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2542,6 +2547,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &799404052
 MonoBehaviour:
@@ -3280,6 +3286,7 @@ RectTransform:
   - {fileID: 2069805402}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 442414108}
   - {fileID: 839626923}
 =======
@@ -3287,6 +3294,8 @@ RectTransform:
 =======
   - {fileID: 1401629960}
 >>>>>>> parent of 70fab0c (Update LessonVowels.unity)
+=======
+>>>>>>> parent of 07efad7 (Merge pull request #9 from esm33/Diedits)
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3294,6 +3303,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &930874887
 MonoBehaviour:
@@ -4044,6 +4054,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401629959}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> parent of 07efad7 (Merge pull request #9 from esm33/Diedits)
 --- !u!1 &1455247211
 GameObject:
   m_ObjectHideFlags: 0
@@ -4180,6 +4192,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455247211}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &1501885230
 =======
@@ -4443,6 +4456,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536670216}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> parent of 07efad7 (Merge pull request #9 from esm33/Diedits)
 --- !u!1 &1550845034
 =======
   m_GameObject: {fileID: 1466850824}
@@ -5073,6 +5088,7 @@ RectTransform:
 <<<<<<< HEAD
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
 --- !u!1 &1565260081
 GameObject:
   m_ObjectHideFlags: 0
@@ -5525,6 +5541,8 @@ CanvasRenderer:
   m_GameObject: {fileID: 1754927331}
 >>>>>>> EmilyEdits
   m_CullTransparentMesh: 1
+=======
+>>>>>>> parent of 07efad7 (Merge pull request #9 from esm33/Diedits)
 --- !u!1 &1802360943
 GameObject:
   m_ObjectHideFlags: 0
@@ -5544,7 +5562,10 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+<<<<<<< HEAD
   m_IsActive: 0
+=======
+>>>>>>> parent of 07efad7 (Merge pull request #9 from esm33/Diedits)
 --- !u!114 &1802360944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6219,6 +6240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD
   m_Color: {r: 1, g: 0.96332, b: 0.8930817, a: 1}
 =======
   m_GameObject: {fileID: 2051437319}
@@ -6230,6 +6252,9 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 >>>>>>> EmilyEdits
+=======
+  m_Color: {r: 0.9245283, g: 0.7413507, b: 0.38958102, a: 1}
+>>>>>>> parent of 07efad7 (Merge pull request #9 from esm33/Diedits)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6273,6 +6298,7 @@ CanvasRenderer:
 <<<<<<< HEAD
   m_GameObject: {fileID: 1932190424}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &2037333322
 =======
   m_GameObject: {fileID: 2051437319}
@@ -6439,6 +6465,8 @@ CanvasRenderer:
   m_GameObject: {fileID: 2063936989}
   m_CullTransparentMesh: 1
 >>>>>>> EmilyEdits
+=======
+>>>>>>> parent of 07efad7 (Merge pull request #9 from esm33/Diedits)
 --- !u!1 &2069805401
 GameObject:
   m_ObjectHideFlags: 0
