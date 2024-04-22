@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class MatchItem : MonoBehaviour, IPointerDownHandler,IDragHandler,IPointerEnterHandler,IPointerUpHandler, IPointerClickHandler
+public class MatchItem : MonoBehaviour, IPointerDownHandler,IDragHandler,IPointerEnterHandler,IPointerUpHandler
 {
     static MatchItem hoverItem;
+
+
     public GameObject linePrefab;
     public string itemName;
+
     private GameObject line;
 
     public void OnPointerDown(PointerEventData eventData)
