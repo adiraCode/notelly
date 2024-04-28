@@ -10,10 +10,8 @@ public class MatchLogic : MonoBehaviour
     static MatchLogic Instance;
 
     public int maxPoints = 3;
-    public Text pointsText;
-    public GameObject levelCompleteUI;
-    public GameObject levelFailedUI;
-    private int points=0;
+    public TextMeshProUGUI pointsText;
+    private int points = 0;
 
     private void Start()
     {
@@ -24,12 +22,12 @@ public class MatchLogic : MonoBehaviour
     {
         pointsText.text = points + "/" + maxPoints;
         if(points == maxPoints ) 
-        { 
-            levelCompleteUI.SetActive(true);
+        {
+            pointsText.text = "Good Job!";
         }
         else
         {
-            levelFailedUI.SetActive(true);
+            pointsText.text = "Try Again";
         }
     }
 
