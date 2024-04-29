@@ -11,6 +11,7 @@ public class MatchLogic : MonoBehaviour
 
     public int maxPoints = 3;
     public TextMeshProUGUI pointsText;
+    public GameObject quizButton;
     private int points = 0;
 
     private void Start()
@@ -24,6 +25,7 @@ public class MatchLogic : MonoBehaviour
         if(points == maxPoints ) 
         {
             pointsText.text = "Good Job!";
+            quizButton.SetActive(true);            
         }
     }
 

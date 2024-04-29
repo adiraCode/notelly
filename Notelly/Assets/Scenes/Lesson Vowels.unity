@@ -1452,7 +1452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &291957482
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2667,6 +2667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPoints: 3
   pointsText: {fileID: 335800500}
+  quizButton: {fileID: 291957481}
 --- !u!114 &508517265
 MonoBehaviour:
   m_ObjectHideFlags: 0
