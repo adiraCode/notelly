@@ -25,10 +25,6 @@ public class MatchLogic : MonoBehaviour
         {
             pointsText.text = "Good Job!";
         }
-        else
-        {
-            pointsText.text = "Try Again";
-        }
     }
 
     public static void AddPoint()
