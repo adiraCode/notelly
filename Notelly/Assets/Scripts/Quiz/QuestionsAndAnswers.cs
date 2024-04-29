@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-[System.Serializable]
-public class QuestionAndAnswers : MonoBehaviour
+[Serializable]
+public struct QuestionAndAnswers
 {
     public string Question;
     public string[] Answers;

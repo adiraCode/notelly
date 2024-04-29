@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class QuizManager : MonoBehaviour
 {
+    [SerializeField]
     public List<QuestionAndAnswers> QnA;
     public GameObject[] options;
     public int currentQuestion;
@@ -27,7 +28,7 @@ public class QuizManager : MonoBehaviour
         for (int i = 0; i < options.Length; i++)
         {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
-            options[i].transform.GetChild(0).GetComponent<TextMeshPro>().text = QnA[currentQuestion].Answers[i];
+            options[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = QnA[currentQuestion].Answers[i];
 
             if (QnA[currentQuestion].CorrectAnswer == i + 1)
             {
@@ -43,8 +44,6 @@ public class QuizManager : MonoBehaviour
         QuestionTxt.text = QnA[currentQuestion].Question;
 
         SetAnswers();
-
-
 
     }
 }
