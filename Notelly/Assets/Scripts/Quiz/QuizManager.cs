@@ -21,6 +21,8 @@ public class QuizManager : MonoBehaviour
     {
         QnA.RemoveAt(currentQuestion);
         generateQuestion();
+
+
     }
 
     void SetAnswers()
@@ -46,4 +48,5 @@ public class QuizManager : MonoBehaviour
         SetAnswers();
 
     }
+
 }
