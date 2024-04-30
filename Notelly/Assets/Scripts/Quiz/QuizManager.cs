@@ -45,6 +45,8 @@ public class QuizManager : MonoBehaviour
 
         QuestionTxt.text = QnA[currentQuestion].Question;
 
+        //insert if-statement to debug/catch exception
+
         SetAnswers();
 
     }
