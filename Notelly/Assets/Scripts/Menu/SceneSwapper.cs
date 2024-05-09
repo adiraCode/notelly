@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwapper : MonoBehaviour
 {
-    //vowels button triggers scene change to the first lesson
+    // Take scene ID from build settings and triggers aqppropriate scene laod
     public void MoveToScene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);
-
     }
 }
