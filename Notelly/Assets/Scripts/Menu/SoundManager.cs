@@ -26,7 +26,6 @@ public class SoundManager : MonoBehaviour
 
         UpdateButtonIcon();
         AudioListener.pause = muted;
-
     }
 
     public void OnButtonPress()

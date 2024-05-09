@@ -3,77 +3,83 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class QuizManager : MonoBehaviour
 {
     [SerializeField]
-    public List<QuestionAndAnswers> QnA;
-    public GameObject[] options;
-    private int currentQuestion = 4;
+    public List<QuestionAndAnswers> QnA; // List from QuestionsAndAnswers
+    public GameObject[] options; // Array for answer options
+    private int currentQuestion = 4; // Current question element
 
-    private int points = 0;
+    public int score; // Track score
 
-    public GameObject completeScreen;
-    public GameObject failedScreen;
+    public GameObject completeScreen; // Results screen for success
+    public GameObject failedScreen; // Results screen for failure
     public GameObject quizPanel;
 
-    // public TextMeshProUGUI confirmTxt;
-    public TextMeshProUGUI resultsTxtC;
-    public TextMeshProUGUI resultsTxtF;
-    public TextMeshProUGUI QuestionTxt;
+    public TextMeshProUGUI resultsTxtC; // Displays correct answer ratio
+    public TextMeshProUGUI resultsTxtF; // Displays correct answer ratio
+    public TextMeshProUGUI QuestionTxt; // Displays question text
+
+    public AnswerScript AnswerScript;
 
     public void Start()
     {
+        // Debug.Log("currentQuestion: " + currentQuestion);
+        // Debug.Log("questionCount: " + questionCount);
         generateQuestion();
     }
 
-
-    public void correct()
+    public void GameOver()
     {
-        
-        if (currentQuestion != 0)
+        Debug.Log("Final score: " + score);
+
+        if (score >= 3)
         {
-            QnA.RemoveAt(currentQuestion);
-            currentQuestion--; // Decrement currentQuestion after removing the question
-            generateQuestion();
+            completeScreen.SetActive(true);
+            quizPanel.SetActive(false);
 
-        }
-        
-       
-       // for (int i = 4; i == 0; i--)
-        //{
-           // if (i == 0)
-            //{
-        if(currentQuestion == 0) {
-         if (points >= 3)
-                {
-                    completeScreen.SetActive(true);
-                    quizPanel.SetActive(false);
-
-                    resultsTxtC.text = points + " out of 5 correct";
-                }
-                else
-                {
-                    failedScreen.SetActive(true);
-                    quizPanel.SetActive(false);
-
-                    resultsTxtF.text = points + " out of 5 correct";
-                }
-        }
-               
-           // }
-       // }
-        /*
-        if (options.GetComponent<AnswerScript>().isCorrect = true)
-        {
-            confirmTxt.text = "Correct";
+            resultsTxtC.text = score + " out of 5 correct";
         }
         else
         {
-            confirmTxt.text = "Wrong";
+            failedScreen.SetActive(true);
+            quizPanel.SetActive(false);
+
+            resultsTxtF.text = score + " out of 5 correct";
         }
-        */        
+    }
+
+    public void correct()
+    {
+        score += 1; // Increment score by 1
+        QnA.RemoveAt(currentQuestion); // Removes current question to prevent reoccurance
+        currentQuestion--; // Decrement currentQuestion after removing the question
+        StartCoroutine(WaitForNext()); // Buffer between questions
+        // generateQuestion(); // Grab the next question
+        /*
+        if (currentQuestion != 0)
+        {
+            QnA.RemoveAt(currentQuestion); // Removes current question to prevent reoccurance
+            currentQuestion--; // Decrement currentQuestion after removing the question
+            generateQuestion();
+        }*/
+    }
+
+    public void wrong()
+    {
+        QnA.RemoveAt(currentQuestion); // Removes current question to prevent reoccurance
+        currentQuestion--; // Decrement currentQuestion after removing the question
+        StartCoroutine(WaitForNext()); // Buffer between questions
+        // generateQuestion(); // Grab the next question
+    }
+
+    IEnumerator WaitForNext()
+    {
+        yield return new WaitForSeconds(1);
+        generateQuestion(); // Grab the next question
     }
 
     void SetAnswers()
@@ -82,6 +88,7 @@ public class QuizManager : MonoBehaviour
         {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = QnA[currentQuestion].Answers[i];
+            options[i].GetComponent<Image>().color = options[i].GetComponent<AnswerScript>().startColor;
 
             if (QnA[currentQuestion].CorrectAnswer == i + 1)
             {
@@ -92,17 +99,17 @@ public class QuizManager : MonoBehaviour
 
     void generateQuestion()
     {
-        if (currentQuestion < QnA.Count)
+        Debug.Log("QnA.Count: " + QnA.Count);
+
+        if (QnA.Count > 0)
         {
-            Debug.Log(currentQuestion);
             QuestionTxt.text = QnA[currentQuestion].Question;
             SetAnswers();
         }
         else
         {
             Debug.LogError("No more questions available.");
-            // You may want to handle this case appropriately, like showing a message to the user or resetting the quiz.
+            GameOver();
         }
     }
-
 }
